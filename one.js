@@ -3,15 +3,12 @@
 // declare all characters
 const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
+function randomString(leng){
+    let str ='';
 
-function randomchar(leng){
-  let str='';
-  let random = Math.floor(Math.random()*leng.length);
-
-  for(let i=0;i<leng;i++){
-    str+=characters.charAt(random);
-    
-  }
-  return str;
+    for(let i=0;i<leng;i++){
+     str+=characters.charAt(Math.floor(Math.random()*characters.length));
+    }
+    return str;
 }
-console.log(randomchar(5))
+console.log(randomString(8));
